@@ -1,2 +1,2 @@
 # BuglyTest
-腾讯bugly测试
+腾讯bugly 热更新 测试
