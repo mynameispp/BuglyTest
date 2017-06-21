@@ -23,11 +23,8 @@ public class SampleApplicationLike extends DefaultApplicationLike {
 
     public SampleApplicationLike(Application application, int tinkerFlags,
                                  boolean tinkerLoadVerifyFlag, long applicationStartElapsedTime,
-                                 long applicationStartMillisTime, Intent tinkerResultIntent, Resources[] resources,
-                                 ClassLoader[] classLoader, AssetManager[] assetManager) {
-        super(application, tinkerFlags, tinkerLoadVerifyFlag, applicationStartElapsedTime,
-                applicationStartMillisTime, tinkerResultIntent, resources, classLoader,
-                assetManager);
+                                 long applicationStartMillisTime, Intent tinkerResultIntent) {
+        super(application, tinkerFlags, tinkerLoadVerifyFlag, applicationStartElapsedTime, applicationStartMillisTime, tinkerResultIntent);
     }
 
 
@@ -35,7 +32,7 @@ public class SampleApplicationLike extends DefaultApplicationLike {
     public void onCreate() {
         super.onCreate();
         // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId
-        Bugly.init(getApplication(), "76ffcb00d3", true);
+        Bugly.init(getApplication(), "76ffcb00d3", false);
         //我们后台就会将你当前设备识别为开发设备，如果设置为false则非开发设备，我们会根据这个配置进行策略控制。
         Bugly.setIsDevelopmentDevice(getApplication(), true);
     }

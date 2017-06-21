@@ -2,7 +2,7 @@ apply plugin: 'com.tencent.bugly.tinker-support'
 
 def bakPath = file("${buildDir}/bakApk/")
 //基线包要填写，基准包生成时的bakApk下的包名：app/build/bakApk/app-...
-def appName = "app-0207-17-23-34"
+def appName = "app-0621-11-25-24"
 
 /**
  * 对于插件各参数的详细解析请参考
@@ -24,7 +24,7 @@ tinkerSupport {
     // 对应tinker插件applyResourceMapping
     baseApkResourceMapping = "${bakPath}/${appName}/app-release-R.txt"
     // tinkerId（唯一性）
-    tinkerId = "1.1.0"
+    tinkerId = "base-2.0.5"
     // 是否开启代理Application，设置之后无须改造Application
     enableProxyApplication = false
 }
