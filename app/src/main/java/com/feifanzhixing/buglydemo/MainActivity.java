@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this, "修复好了第二次", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "修复好了第三次", Toast.LENGTH_SHORT).show();
 //        Toast.makeText(this, "Bug", Toast.LENGTH_SHORT).show();
     }
 }
